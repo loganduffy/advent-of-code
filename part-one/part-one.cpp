@@ -36,9 +36,6 @@ int rotationSolver(const std::vector<std::string>& rotations)
     char direction = rotation[0];
     int distance = std::stoi(rotation.substr(1));
 
-    // Debug line to properly check if the file is being read correctly
-    std::cout << "Direction: " << direction << " Distance: " << distance << '\n';
-
     if (direction == 'R')
     {
       // Modular arithmetic works here no matter if it's a 3 digit rotation or 2
@@ -69,7 +66,7 @@ int rotationSolver(const std::vector<std::string>& rotations)
 
 int main() 
 {
-  std::vector<std::string> rotations = readFile("puzzle.txt");
+  std::vector<std::string> rotations = readFile("../puzzle.txt");
   int result = rotationSolver(rotations);
 
   std::cout << "Final Count: " << result << '\n';
